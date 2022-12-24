@@ -315,15 +315,15 @@
 
         <div class="zoom">
 
-            <p><a><img id="imgDue" style="width: 40%; height: 40%; border-radius: 10px" src="14.jpg" alt="alternatetext;"></a></p>
+            <p><a><img id="imgDue" style="width: 80%; height: 40%; border-radius: 10px" src="14.jpg" alt="alternatetext;"></a></p>
 
         </div>
 
         <div style="padding-top: 700px; color:white ;z-index:7;font-size:60px" ;>
             <div class="typewriter">
 
-                Did you know that over a million Americans needed a plumber more that 10 times in their home in the past year.<br /><br />
-                Hi my name is Many and I am the owner and founder of Aqua Pluming Pros.
+                A million Americans needed a plumber.<br /><br />
+                Call us Monday / Saturdat  9 am / 7 pm.
 
             </div>
             <!--<p id="typeing">-->
@@ -334,13 +334,24 @@
 
         <div class="zoomtwo" style="padding-top: 400px" ;>
 
-            <p><a><img id="imgDue" style="width: 30%; height: 30%; border-radius: 10px" src="WA.jpg" alt="alternatetext;"></a></p>
+            <p><a><img id="imgDue" style="width: 80%; height: 30%; border-radius: 10px" src="WA.jpg" alt="alternatetext;"></a></p>
 
         </div>
 
-   
+        <div style="padding-top: 700px; color:white ;z-index:7;font-size:60px" ;>
+            <div class="typewriter">
 
+                Outside Wilmington.<br /><br />
+                Delawere City.
+
+            </div>
+            <!--<p id="typeing">-->
+            <!--Did you know that over a million Americans needed a plumber more that 10 times in their home in the past year.<br /><br />
+        Hi my name is Many and I am the owner and founder of Aqua Pluming Pros-->
+            <!--</p>-->
         </div>
+
+    </div>
         <!--  <p><a><img id="imgUno" onmouseout="changeImgUnoToDue()" style="width: 100%; height: 480px; border-radius: 10px" src="WA.jpg" alt="alternatetext;"></a></p>-->
         <!--<p><a><img id="imgTre" onmousemove="changeImg()" style="width: 100%; height: 480px; border-radius: 10px" src="WA.jpg" alt="alternatetext;"></a></p>
     <p><a><img id="imgQuattro" onmousemove="changeImg()" style="width: 100%; height: 480px; border-radius: 10px" src="WA.jpg" alt="alternatetext;"></a></p>
@@ -528,34 +539,34 @@
             }
 
 
-            const zoomElement = document.querySelector(".zoom");
-            let zoom = 1;
-            const ZOOM_SPEED = 0.1;
+            //const zoomElement = document.querySelector(".zoom");
+            //let zoom = 1;
+            //const ZOOM_SPEED = 0.1;
 
-            document.addEventListener("wheel", function (e) {
+            //document.addEventListener("wheel", function (e) {
 
-                if (e.deltaY > 0) {
-                    zoomElement.style.transform = `scale(${zoom += ZOOM_SPEED})`;
-                } else {
-                    zoomElement.style.transform = `scale(${zoom -= ZOOM_SPEED})`;
-                }
+            //    if (e.deltaY > 0) {
+            //        zoomElement.style.transform = `scale(${zoom += ZOOM_SPEED})`;
+            //    } else {
+            //        zoomElement.style.transform = `scale(${zoom -= ZOOM_SPEED})`;
+            //    }
 
-            });
+            //});
 
 
-            const zoomElements = document.querySelector(".zoomtwo");
-            let zooms = 1;
-            const ZOOM_SPEEDs = 0.1;
+            //const zoomElements = document.querySelector(".zoomtwo");
+            //let zooms = 1;
+            //const ZOOM_SPEEDs = 0.1;
 
-            document.addEventListener("wheel", function (e) {
+            //document.addEventListener("wheel", function (e) {
 
-                if (e.deltaY > 0) {
-                    zoomElements.style.transform = `scale(${zooms += ZOOM_SPEEDs})`;
-                } else {
-                    zoomElements.style.transform = `scale(${zooms -= ZOOM_SPEEDs})`;
-                }
+            //    if (e.deltaY > 0) {
+            //        zoomElements.style.transform = `scale(${zooms += ZOOM_SPEEDs})`;
+            //    } else {
+            //        zoomElements.style.transform = `scale(${zooms -= ZOOM_SPEEDs})`;
+            //    }
 
-            });
+            //});
 
             function sendSMS() {
                 debugger;
