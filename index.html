@@ -1,1210 +1,213 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <script src="https://smtpjs.com/v3/smtp.js">
-    </script>
-    <!--<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>-->
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
 
+    <div style="background-color: white ">
+        <div class="d-flex justify-content-end bg-light mb-3">
+            <div class="p-2 bg-light"><button type="button" class="btn btn-warning">     <a href="tel:8665562570">📞</a></button></div>
+            <div class="p-2 bg-light" style="color:black"><h3>(343)342 343 324</h3></div>
+            <div class="p-2 bg-light">
+
+                <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
+                    ❔
+                </button>
+
+            </div>
 
 
-    <style>
-
-        @media only screen and (max-width: 768px) {
-            /* For mobile phones: */
-            #card {
-                visibility: hidden;
-            }
-        }
-
-        @media screen and (min-width:1600px) {
-            body {
-                zoom: 180%;
-            }
-        }
-
-        @media only screen and (max-width: 800px) {
-
-            body {
-                display: none;
-                visibility: hidden;
-            }
-
-            #Web {
-                display: none;
-                visibility: hidden;
-            }
-
-            #form {
-                display: none;
-                visibility: hidden;
-            }
-
-            #cagna {
-                display: none;
-                visibility: hidden;
-            }
-            /*     #subBarMobile {
-                    display: none;
-                    visibility: hidden;
-                }*/
-
-            /*          #homeMobile:hover ~ #subBarMobile {
-                    display: block;
-                    visibility: visible;
-                }
-
-                #subBarMobile :hover {
-                    display: block;
-                    visibility: visible;
-                }*/
+        </div>
+        <div class="offcanvas offcanvas-start" id="demo">
+            <div class="offcanvas-header">
+                <h1 class="offcanvas-title">Info</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body">
 
 
-            /*     #homeMobile:hover ~ #subBarMobile {
-                    display: none;
-                }*/
-        }
+                <p>Some text lorem ipsum.</p>
+                <p>Some text lorem ipsum.</p>
+                <button class="btn btn-secondary" type="button">A Button</button>
+            </div>
+        </div>
 
-        @media only screen and (min-width: 801px) {
-            #mobile {
-                display: none;
-                visibility: hidden;
-            }
-        }
-
-
-        @media only screen and (min-width: 300px) {
-            #card {
-                position: fixed;
-                background-color: #ffd800;
-                border-radius: 10px;
-                text-align: center;
-                border: solid;
-                border-color: #11395d;
-                transform: rotate(90deg);
-                top: 100px;
-                left: -76px;
-            }
-        }
-
-
-        ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            background-color: #11395d;
-        }
-
-        li a {
-            display: block;
-            color: white;
-            padding: 40px 16px;
-            text-decoration: none;
-        }
-
-            li a.active {
-                background-color: #11395d;
-                color: white;
-            }
-
-            li a:hover:not(.active) {
-                background-color: #555;
-                color: white;
-            }
-    </style>
-
-    <div id="mobile" style="text-align:center;">
-
-
-        <ul>
-            <li onmouseover="homeMobileOver()" id="homeMobile"> <p><a><img style="width:200px; height:200px; border-radius:10px;" src="forumfotter.jpg" alt="alternatetext"></a></p></li>
-            <li onmouseout="homeMobileOut()" id="subBarMobile"><a href="#news">News</a></li>
-            <li onmouseout="homeMobileOut()" id="subBarMobile"><a href="#contact">Contact</a></li>
-            <li onmouseout="homeMobileOut()" id="subBarMobile"><a href="#about">About</a></li>
-        </ul>
+        <!--style="border:outset 4px-->
+        <nav class="navbar navbar-expand-sm bg-light navbar-light">
+            <div class="container-fluid" style="background-color: #11395d;">
+                <img src="forumfotter.jpg" alt="Logo" width="138" height="130" class="d-inline-block align-text-top" style="margin:13px">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar" style="font-size:30px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a style="color:aliceblue" class="nav-link" href="#">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a style="color:aliceblue" class="nav-link" href="#">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a style="color:aliceblue" class="nav-link" href="#"></a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a style="color:aliceblue" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Portafolio</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Link</a></li>
+                                <li><a class="dropdown-item" href="#">Another link</a></li>
+                                <li><a class="dropdown-item" href="#">A third link</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </div>
 
 
-    <script>
-        function homeMobileOver() {
-
-            document.getElementById("subBarMobile").style.display = "block";
-
-        }
-
-        function homeMobileOut() {
-            debugger;
-            document.getElementById("subBarMobile").style.display = "none";
-        }
-
-    </script>
 
 
-    <div id="allowaudio" style="position: fixed; width: 100%; height: 10%; opacity: 0.8; background-color: #11395d; margin: auto; border-radius: 10px; text-align: center;">
-        <div onclick="allowaudio()" id="x" style="width: 80%; height: 80%; opacity: 0.8;  background-color: #11395d; margin: auto; border-radius: 10px; text-align: center;">
-            <button style="font-size: 40px"; type="button" class="block"><b>🔇</b></button>
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-sm-8" style="background-color:white;">
+                <img src="Text.png" alt="Los Angeles" class="d-block" style="width:100%">
+            </div>
+            <div class="col-sm-4" style="background-color:white;text-align:center; margin-top:30%">
+                <p><h1>Our modo at a Aqua plumbing pros wich we strongly believe in is that a customer should not have to call a plumber more that once for the same repair.At Aqua pluming pros number one priority.</h1></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <!--<h1>Grid</h1>
+        <p>This example demonstrates a 50%/50% split on small, medium and large devices. On extra small devices, it will stack (100% width).</p>
+        <p>Resize the browser window to see the effect.</p>-->
+        <div class="row">
+            <div class="col-sm-6" style="background-color: white; text-align: center; margin-top: 10% ">
+                <h1>
+                    Our mission is to provide efficinet plumbing systems to our customers in order to conserve the health of the community.<br>
+
+                </h1>
+            </div>
+            <div class="col-sm-6" style="background-color:white;">
+                <img src="14.jpg" alt="Los Angeles" class="d-block" style="width:100%">
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <!--<h1>Grid</h1>
+        <p>This example demonstrates a 50%/50% split on small, medium and large devices. On extra small devices, it will stack (100% width).</p>
+        <p>Resize the browser window to see the effect.</p>-->
+        <div class="row">
+            <div class="col-sm-6" style="background-color: white;text-align: center; margin-top: 10%" >
+                <h1>
+                    Our mission is to provide efficinet plumbing systems to our customers in order to conserve the health of the community.<br>
+
+                </h1>
+                <img src="14.jpg" alt="Los" class="d-block" style="width:100%" margin-top: 10%>
+            </div>
+            <div class="col-sm-6" style="background-color: white; text-align: center; margin-top: 33%">
+                <h1>
+                    Our vision is a team of technicias that provide excellent services , through the proper training , knowledge and who have the same passion to provide uncomparable service in a ever changing industry.<br>
+
+                </h1>
+            </div>
         </div>
     </div>
 
 
 
-
-    <div id="Callus" style="position: fixed; width: 100%; height: 10%; opacity: 0.8; background-color: #11395d; margin: auto; border-radius: 10px; text-align: center;">
-        <div onclick="allowaudio()" id="x" style="width: 80%; height: 80%; opacity: 0.8; background-color: #11395d; margin: auto; border-radius: 10px; text-align: center;">
-            <button style="font-size: 40px"; type="button" class="block"><a href="tel:+13025599887">📞</a></button>
-        </div>
+    <div class="container-fluid p-5 my-5 border  bg-primary text-white">
+        <h1>Our deside</h1>
+        <h2>is ensure the health , well being and hygiene that our customers deserve.</h2>
+        <img src="14.jpg" alt="Los" class="d-block" style="width:100%">
     </div>
-    <!--<div id="card" style="position: fixed; background-color: #ffd800; border-radius: 10px; text-align: center; border: solid; border-color: #11395d; transform: rotate(90deg);top:100px ;left:-86px;">
-        <a href="tel:+13025599887"><h2 style="font-family:Elephant">📞Call us Now_ <span><br /></span></h2></a>
-    </div>-->
-    <!--<div id="cagna" style="position: fixed;  border-radius: 10px; text-align: center;top:60px ;right:-86px;">
-        <p><a><img style="width:400px; height:400px;" src="furgone.png" alt="alternatetext"></a></p>
-    </div>-->
+
+    <div class="container-fluid p-5 my-5 bg-dark text-white">
+        <h1>Our deside</h1>
+        <h2>is ensure the health , well being and hygiene that our customers deserve.</h2>
+
+    </div>
 
 
 
 
-    <div>
-        <video autoplay muted loop id="Video">
-            <source src="8.mp4" type="video/mp4" />
+
+    <div class="container-fluid p-5 my-5 bg-primary text-white">
+        <h1>Let's introduce ourself</h1>
+        <p></p>
+
+
+        <video autoplay loop id="Videos" style="width: 100%; height: 100%" controls>
+            <source src="8.mp4" type="video/mp4">
         </video>
     </div>
 
 
-    <div id="Web" style="width: 100%; height: 800px; background-color: #11395d; display: inline-block;">
-        <div class="container blue circleBehind">
 
-            <p><a><img style="width:300px; height:300px;" src="forumfotter.jpg" alt="alternatetext"></a></p>
-            <a>HOME</a>
-            <!--<a>ARTICLES</a>-->
-            <a href="#scroll">PORTFOLIO</a>
-            <a href="tel:+13025599887">CALL US</a>
-            <a href="#Contact">ABOUT</a>
-            <!--<a href="#Contact">CONTACT</a>-->
-            <div class="typewriter" style="padding-top:64px;color:white ; font-size:25px;" ;>
-                <h1>We can fix it,Call us now</h1>
-            </div>
+
+
+    <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+        <!-- Indicators/dots -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
         </div>
-    </div>
 
-    <!--<div style="background-color: white; opacity:0.5;">
-        <main style="width: 100%; height: 800px;  display: inline-block; ">
-            <div onmouseout="divDown()" onmouseover="divUp()" id="x" style="width: 80%; height: 80%; opacity:0.8; background-color: #FFF; margin:auto ;border-radius:10px; text-align:center;">
-                <div onmouseover="divUp()" id="x" style="width: 80%; height: 80%; opacity: 0.8; background-color: #FFF; margin: auto; border-radius: 10px; text-align: center; font-size: 30px ; color:black">
-                    <p>
-                        <br /><br />
-
-
-
-                        <h1> Our modo at a Aqua plumbing pros wich we strongly believe in is that a customer should not have to call a plumber more than once  for the same repair.</h1>-->
-    <!--<a href="sms:99999999?body=Oi">Cl</a>-->
-    <!--<br /><br />
-                    </p>
+        <!-- The slideshow/carousel -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="14.jpg" alt="Los Angeles" class="d-block" style="width:100%">
+                <div class="carousel-caption">
+                    <h3>Mario's House</h3>
+                    <p>We had such a great time in Mario House!</p>
                 </div>
             </div>
-        </main>
-
-
-    </div>-->
-    <div style="width: 100%; height: 800px;  display: inline-block; ">
-        <div style="width: 100%; height: 80%; background-color: #11395d; margin: auto; border-radius: 0px;">
-
-
-
-
-            <video autoplay muted loop id="Videos" style="width: 100%; height: 100%" controls>
-                <source src="8.mp4" type="video/mp4">
-            </video>
-
-
-            <!--<p><a><img id="imgUno" onmouseout="changeImgUnoToDue()" style="width: 100%; height: 480px; border-radius: 10px" src="WA.jpg" alt="alternatetext;"></a></p>-->
-            <!--<p><a><img id="imgDue" onmouseout="changeImgDuetoTre()" style="width: 100%; height: 480px; border-radius: 10px" src="14.jpg" alt="alternatetext;"></a></p>-->
-            <!--<p><a><img id="imgTre" onmousemove="changeImg()" style="width: 100%; height: 480px; border-radius: 10px" src="WA.jpg" alt="alternatetext;"></a></p>
-            <p><a><img id="imgQuattro" onmousemove="changeImg()" style="width: 100%; height: 480px; border-radius: 10px" src="WA.jpg" alt="alternatetext;"></a></p>
-            <p><a><img id="imgFive" onmousemove="changeImg()" style="width: 100%; height: 480px; border-radius: 10px" src="WA.jpg" alt="alternatetext;"></a></p>
-            <p><a><img id="imgSix" onmousemove="changeImg()" style="width: 100%; height: 480px; border-radius: 10px" src="WA.jpg" alt="alternatetext;"></a></p>
-            <p><a><img id="imgSeven" onmousemove="changeImg()" style="width: 100%; height: 480px; border-radius: 10px" src="WA.jpg" alt="alternatetext;"></a></p>-->
+            <div class="carousel-item">
+                <img src="14.jpg" alt="Room" class="d-block" style="width:100%">
+                <div class="carousel-caption">
+                    <h3>Room</h3>
+                    <p>Thank you!</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="14.jpg" alt="Delawere" class="d-block" style="width:100%">
+                <div class="carousel-caption">
+                    <h3>Delawere</h3>
+                    <p>We love the first state!</p>
+                </div>
+            </div>
         </div>
+
+        <!-- Left and right controls/icons -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+
+    <div class="container-fluid mt-3">
+        <h3></h3>
+        <p></p>
     </div>
 
 
-    <article>
-        <div class="container reveal fade-bottom">
-            <!--<h2>Caption</h2>-->
-            <div class="text-container">
-                <div class="text-box">
-                    <h3>We Make it flow</h3>
-                    <!--<p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
-                        eius molestiae perferendis eos provident vitae iste.
-                    </p>-->
-                </div>
-                <!--<div class="text-box">
-                    <h3>Section Text</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
-                        eius molestiae perferendis eos provident vitae iste.
-                    </p>
-                </div>
-                <div class="text-box">
-                    <h3>Section Text</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
-                        eius molestiae perferendis eos provident vitae iste.
-                    </p>-->
-                </div>
-            </div>
-        </div>
-    </article>
+    <div class="container-fluid mt-4">
+        <h3></h3>
 
-    <article>
-        <div class="container reveal fade-left" >
-            <!--<h2>Caption</h2>-->
-            <div class="text-container" ">
-                <div class="text-box">
-                    <h3>Never Call two time again</h3>
-                    <!--<p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
-                        eius molestiae perferendis eos provident vitae iste.
-                    </p>-->
-                </div>
-                <!--<div class="text-box">
-                    <h3>Section Text</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
-                        eius molestiae perferendis eos provident vitae iste.
-                    </p>
-                </div>
-                <div class="text-box">
-                    <h3>Section Text</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
-                        eius molestiae perferendis eos provident vitae iste.
-                    </p>-->
-                </div>
-            </div>
-        </div>
-    </article>
-
-    <article>
-        <div class="container reveal fade-right">
-            <!--<h2>Caption</h2>-->
-            <div class="text-container">
-                <div class="text-box">
-                    <h3>Save time and money</h3>
-                    <!--<p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
-                        eius molestiae perferendis eos provident vitae iste.
-                    </p>-->
-                </div>
-                <!--<div class="text-box">
-                    <h3>Section Text</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
-                        eius molestiae perferendis eos provident vitae iste.
-                    </p>
-                </div>
-                <div class="text-box">
-                    <h3>Section Text</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
-                        eius molestiae perferendis eos provident vitae iste.
-                    </p>-->
-                </div>
-            </div>
-        </div>
-    </article>
-
-    <!--<section style="width: 100%; height: 600px;  display: inline-block; ">
-        <div style="width: 80%; height: 80%;  background-color: #FFF; margin:auto ;border-radius:10px;">
-
-        </div>
-    </section>-->
-
-
-    <div id="form" style="width: 100%; height: 800px;  display: inline-block; ">
-        <div style="width: 100%; height: 80%;  background-color: #FFF; margin:auto ;border-radius:10px;">
-            <!--<form action="mailto:someone@example.com" method="post" enctype="text/plain">
-                Name:<br>
-                <input style="margin-top: 5px;background-color: #fff; height:35px; width:235px;" type="text" name="name"><br>
-                E-mail:<br>
-                <input style="margin-top: 5px;background-color: #fff; height:35px; width:235px;" type="text" name="mail"><br>
-                Comment:<br>
-                <input style="margin-top: 5px;background-color: #fff; height:35px; width:235px;" type="text" name="comment" size="50"><br><br>
-                <select style="margin-top: 5px;background-color: #fff; height:35px; width:235px;" name="comment" id="cars">
-                    <option value="volvo">Volvo</option>
-                    <option value="saab">Saab</option>
-                    <option value="mercedes">Mercedes</option>
-                    <option value="audi">Audi</option>
-                </select>
-                <input style="margin-top: 5px;background-color: #fff; height:35px; width:235px;" type="submit" value="Send">
-                <input style="margin-top: 5px;background-color: #fff; height:35px; width:235px;" type="reset" value="Reset">
-            </form>
-
-
-            <form id="javascript_form">
-                <input type="text" name="subject" placeholder="Subject" />
-                <textarea name="text" placeholder="Message"></textarea>
-                <input type="submit" id="js_send" value="Send" />
-            </form>-->
-
-            <div style=" margin: auto; text-align: center;padding-top:90px;padding-left:180px; padding-right:180px ">
-                <form method="post">
-                    <input type="text" id="email" name="email" placeholder="Email">
-
-
-                    <select id="service" name="service">
-                        <option value="WaterLeaks">Water Leaks</option>
-                        <option value="FrozenPipes">Frozen Pipes</option>
-                        <option value="Bursted Pipes">Bursted Pipes</option>
-                    </select>
-                    <textarea id="text" name="text" rows="4" cols="50" placeholder="Help me Bro my house it is full of water and my wife is not a good swimmer"></textarea>
-                    <input style="width:130px; height:40px; color:blue" type="submit" value="Send Email" onclick="sendEmail()" />
-                </form>
-
-
-            </div>
-            <!--<form method="post">
-
-                <input style="margin-top: 5px;background-color: #fff; height:35px; width:235px;" type="text" name="name" id="name"><br>
-
-                <input type="button" value="Send Email"
-                       onclick="sendSMS()" />
-            </form>-->
-
-
-        </div>
+        <p></p>
     </div>
-
-
-
-
-
-    <div id="main" style="width: 100%; height: 800px; display: inline-block; margin-bottom: -4px; ">
-        <!-- <div style="width: 71%;"></div>-->
-        <div style="width: 90%; height: 80%;  background-color: #FFF; margin:auto ;border-radius:10px;">
-            <div style="float: right; display: block; width: 100%; height: 100%; ">
-                <a href="https://www.google.it/maps/place/Delaware,+Stati+Uniti/@39.1398797,-76.5078688,8z/data=!3m1!4b1!4m5!3m4!1s0x89c705764d0cd63b:0x941d2d128c04e878!8m2!3d38.9108325!4d-75.5276699"><img style="width: 100%; height: 100%; border-radius: 10px" src="maps.png" alt="alternatetext"></a>
-
-            </div>
-        </div>
-    </div>
-
-
-
-    <div class="scroll" ; id="scroll" ; style="width: 100%; height: 6600px; background-color: #130994; display: inline-block; margin-bottom: -4px;padding-top:300px; text-align: center; opacity: 0.8;">
-
-
-
-        <div class="zoom">
-
-            <p><a><img id="imgDue" style="width: 80%; height: 40%; border-radius: 10px" src="14.jpg" alt="alternatetext;"></a></p>
-
-        </div>
-
-        <div style="padding-top: 700px; color:white ;z-index:7;font-size:60px" ;>
-            <div class="typewriter">
-
-                A million Americans needed a plumber.<br /><br />
-                Call us Monday / Saturdat  9 am / 7 pm.
-
-            </div>
-            <!--<p id="typeing">-->
-            <!--Did you know that over a million Americans needed a plumber more that 10 times in their home in the past year.<br /><br />
-            Hi my name is Many and I am the owner and founder of Aqua Pluming Pros-->
-            <!--</p>-->
-        </div>
-
-        <div class="zoomtwo" style="padding-top: 400px" ;>
-
-            <p><a><img id="imgDue" style="width: 80%; height: 30%; border-radius: 10px" src="13.jpg" alt="alternatetext;"></a></p>
-
-        </div>
-
-        <div style="padding-top: 700px; color:white ;z-index:7;font-size:60px" ;>
-            <div class="typewriter">
-
-                Outside Wilmington.<br /><br />
-                Delawere City.
-
-            </div>
-            <!--<p id="typeing">-->
-            <!--Did you know that over a million Americans needed a plumber more that 10 times in their home in the past year.<br /><br />
-            Hi my name is Many and I am the owner and founder of Aqua Pluming Pros-->
-            <!--</p>-->
-        </div>
-        <div class="zoomtre" style="padding-top: 400px" ;>
-
-            <p><a><img id="imgDue" style="width: 80%; height: 30%; border-radius: 10px" src="WA.jpg" alt="alternatetext;"></a></p>
-
-        </div>
-
-
-
-    </div>
-    <!--  <p><a><img id="imgUno" onmouseout="changeImgUnoToDue()" style="width: 100%; height: 480px; border-radius: 10px" src="WA.jpg" alt="alternatetext;"></a></p>-->
-    <!--<p><a><img id="imgTre" onmousemove="changeImg()" style="width: 100%; height: 480px; border-radius: 10px" src="WA.jpg" alt="alternatetext;"></a></p>
-    <p><a><img id="imgQuattro" onmousemove="changeImg()" style="width: 100%; height: 480px; border-radius: 10px" src="WA.jpg" alt="alternatetext;"></a></p>
-    <p><a><img id="imgFive" onmousemove="changeImg()" style="width: 100%; height: 480px; border-radius: 10px" src="WA.jpg" alt="alternatetext;"></a></p>
-    <p><a><img id="imgSix" onmousemove="changeImg()" style="width: 100%; height: 480px; border-radius: 10px" src="WA.jpg" alt="alternatetext;"></a></p>
-    <p><a><img i-->
-    <!--d="imgSeven" onmousemove="changeImg()" style="width: 100%; height: 480px; border-radius: 10px" src="WA.jpg" alt="alternatetext;"></a></p>-->
-
-
-
-
-
-
-
-
-    <footer id="Contact" class="section bg-footer" style="width: 100%; height: 600px; background-color: #130994; display: inline-block; margin-bottom: -4px; ">
-        <section class="contact-area" id="contact">
-            <div style="width: 70%; height: 80%;  background-color: #ffd800; margin:auto ;border-radius:10px;">
-                <p><a><img style="width:200px; height:200px;" src="forumfotter.jpg" alt="alternatetext"></a></p>
-
-            </div>
-
-            <div class="container">
-
-                <div class="row">
-                    <div class="col-lg-6 offset-lg-3">
-
-                        <div class="contact-content text-center">
-                            <p>
-                                Did you know that over a million Americans needed a plumber more that 10 times in their home in the past year.<br /><br />
-                                Hi my name is Many and I am the owner and founder of Aqua Pluming Pros
-                            </p>
-
-                            <div class="hr"></div>
-                            <h6>2401 0wen dr, Wilmington, DE, United States, Delaware.</h6>
-                            <h6>+1 302-559-9887</h6>
-                            <div class="contact-social">
-
-
-
-
-
-                                <a href="https://www.facebook.com/Aquaplumbingpros"><img style="width:100px; height:100px;" src="facebook.png" alt="alternatetext"></a>
-                                <a href="https://instagram.com/aquaplumbingpros?igshid=YmMyMTA2M2Y="><img style="width:100px; height:100px;" src="instagram.png" alt="alternatetext"></a>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </footer>
-
-
-
-
-
-
-    <script>
-        window.onload = function () {
-            //(alert("ciao");
-            document.getElementById("Callus").style.display = "none";
-            $("#Videos").prop('muted', false);
-            typeWriter();
-            var vid = document.getElementById("Videos");
-            vid.muted = false;
-            var vid = document.getElementById("Videos").src = "8.mp4";
-
-            document.getElementById("imgDue").style.display = "none";
-            let h = e.getAttribute("hidden");
-            //document.getElementById("tre").style.width = "90%";
-            //document.getElementById("quattro").style.width = "90%";
-            //document.getElementById("five").style.display
-            document.getElementById("subBarMobile").style.display = "none";
-            debugger;
-
-        }
-
-
-
-        debugger;
-        function changeImgUnoToDue() {
-            document.getElementById("imgDue").style.display = "block";
-            document.getElementById("imgUno").style.display = "none";
-            //document.getElementById("x").style.width = "90%";
-            //document.getElementById("x").style.width = "90%";
-            //document.getElementById("x").style.width = "90%";
-            //document.getElementById("x").style.width = "90%";
-        }
-
-        function allowaudio() {
-            debugger;
-            document.getElementById("allowaudio").style.display = "none";
-            document.getElementById("Callus").style.display = "block";
-            var vid = document.getElementById("Videos");
-            vid.muted = false;
-            vid.play();
-
-        }
-
-
-
-        function changeImgDuetoTre() {
-            document.getElementById("imgDue").style.display = "none";
-            document.getElementById("imgUno").style.display = "block";
-            //document.getElementById("x").style.width = "90%";
-            //document.getElementById("x").style.width = "90%";
-            //document.getElementById("x").style.width = "90%";
-            //document.getElementById("x").style.width = "90%";
-        }
-
-
-
-        //const divScroll = document.querySelector('.scroll');
-        //divScroll.addEventListener('scroll', () => {
-        //    let scrollTop = document.documentElement.scrollTop;
-        //    document.getElementById('imgDue').style.width = 100 + scrollTop / 5 + '%';
-        //});
-
-        var i = 0;
-        var txt = 'Lorem ipsum dummy text blabla.';
-        var speed = 50;
-
-        function typeWriter() {
-            debugger;
-            if (i < txt.length) {
-                document.getElementById("typeing").innerHTML += txt.charAt(i);
-                i++;
-                setTimeout(typeWriter, speed);
-            }
-        }
-
-
-
-        debugger;
-        function divUp() {
-
-            document.getElementById("x").style.width = "90%";
-            document.getElementById("x").style.height = "90%";
-
-        }
-
-        function divDown() {
-
-            document.getElementById("x").style.width = "80%";
-            document.getElementById("x").style.height = "80%";
-        }
-
-
-        //function sendEmail() {
-        //    Email.send({
-        //        SecureToken: "<your generated token>",
-        //        To: 'recipient@example.com',
-        //        From: "sender@example.com",
-        //        Subject: "Test Email",
-        //        Body: "<html><h2>Header</h2><strong>Bold text</strong><br></br><em>Italic</em></html>",
-        //        Attachments: [
-        //            {
-        //                name: "smtp.png",
-        //                path: "https://…/smtp.png"
-        //            }]
-        //    }).then(
-        //        message => alert(message)
-        //    );
-        //}
-        function sendEmail() {
-            debugger;
-            var email = document.getElementById('email').value;
-            var service = document.getElementById('service').value;
-            var text = document.getElementById('text').value;
-            alert(name);
-            Email.send({
-
-                Host: "smtp.elasticemail.com",
-                Username: "giammarinimichele@gmail.com",
-                Password: "6F6BDD80FE46F0278D9A927286F7337586FD",
-                To: 'carognamario@gmail.com',
-                From: email,
-                Subject: service,
-                Body: text,
-            })
-                .then(function (message) {
-                    alert("mail sent successfully")
-                });
-        }
-
-
-        //const zoomElement = document.querySelector(".zoom");
-        //let zoom = 1;
-        //const ZOOM_SPEED = 0.1;
-
-        //document.addEventListener("wheel", function (e) {
-
-        //    if (e.deltaY > 0) {
-        //        zoomElement.style.transform = `scale(${zoom += ZOOM_SPEED})`;
-        //    } else {
-        //        zoomElement.style.transform = `scale(${zoom -= ZOOM_SPEED})`;
-        //    }
-
-        //});
-
-
-        //const zoomElements = document.querySelector(".zoomtwo");
-        //let zooms = 1;
-        //const ZOOM_SPEEDs = 0.1;
-
-        //document.addEventListener("wheel", function (e) {
-
-        //    if (e.deltaY > 0) {
-        //        zoomElements.style.transform = `scale(${zooms += ZOOM_SPEEDs})`;
-        //    } else {
-        //        zoomElements.style.transform = `scale(${zooms -= ZOOM_SPEEDs})`;
-        //    }
-
-        //});
-
-        function sendSMS() {
-            debugger;
-            Script.Sms.Send({
-                connectorType: "connector-sms-twilio",
-                connectorName: "Twilio SMS Example Connector",
-                recipients: "+10987654321",
-                from: "+441234098765",
-                body: "We've raised your issue with an engineer, and your Job ID is " + [var_csSessionID],
-                callback: function (response) { if (response.Error != "") { Script.Toast.Error("SMS Failure", response.Error); } }
-            });
-        }
-        debugger;
-        var myVideo = document.getElementById('Video');
-        if (typeof myVideo.loop == 'boolean') { // loop supported
-            myVideo.loop = true;
-        } else { // loop property not supported
-            myVideo.addEventListener('ended', function () {
-                this.currentTime = 0;
-                this.play();
-            }, false);
-        }
-        //...
-        myVideo.play();
-    </script>
-
-
-    <script type="text/javascript">
-        debugger;
-                                                    //function sendEmail() {
-                                                    //    Email.send({
-                                                    //        Host: "smtp.elasticemail.com",
-                                                    //        Username: "giammarinimichele@gmail.com",
-                                                    //        Password: "6F6BDD80FE46F0278D9A927286F7337586FD",
-                                                    //        To: 'carognamario@gmail.com',
-                                                    //        From: "sender@email_address.com",
-                                                    //        Subject: "Sending Email using javascript",
-                                                    //        Body: "Well that was easy!!",
-                                                    //    })
-                                                    //        .then(function (message) {
-                                                    //            alert("mail sent successfully")
-                                                    //        });
-                                                    //}
-
-
-                                                    //<script type="text/javascript">
-                                                    //    debugger;
-                                                    //    function sendEmail() {
-                                                    //        Email.send({
-                                                    //            Host: "smtp-relay.sendinblue.com",
-                                                    //            Username: "giammarinimichele@gmail.com",
-                                                    //            Password: "Zwmb7UOyr6tfWANI",
-                                                    //            To: 'carognamario@gmail.com',
-                                                    //            From: "sender@email_address.com",
-                                                    //            Subject: "Sending Email using javascript",
-                                                    //            Body: "Well that was easy!!",
-                                                    //        })
-                                                    //            .then(function (message) {
-                                                    //                alert("mail sent successfully")
-                                                    //            });
-                                                    //    }
-
-
-
-
-        function reveal() {
-            var reveals = document.querySelectorAll(".reveal");
-
-            for (var i = 0; i < reveals.length; i++) {
-                var windowHeight = window.innerHeight;
-                var elementTop = reveals[i].getBoundingClientRect().top;
-                var elementVisible = 150;
-
-                if (elementTop < windowHeight - elementVisible) {
-                    reveals[i].classList.add("active");
-                } else {
-                    reveals[i].classList.remove("active");
-                }
-            }
-        }
-
-        window.addEventListener("scroll", reveal);
-    </script>
-
-
-    <style>
-
-        @import url("https://fonts.googleapis.com/css2?family=Asap&display=swap");
-
-      /*  * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: "Asap", sans-serif;
-        }
-
-        body {
-            background: #42455a;
-        }*/
-
-        article {
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-        }
-
-            article:nth-child(1) {
-                color: #e0ffff;
-            }
-
-            article:nth-child(2) {
-                color: #42455a;
-                background: #e0ffff;
-            }
-
-            article:nth-child(3) {
-                color: #e0ffff;
-            }
-
-            article:nth-child(4) {
-                color: #42455a;
-                background: #e0ffff;
-            }
-
-            article .container {
-                margin: 100px;
-            }
-
-            article h1 {
-                font-size: 3rem;
-                margin: 20px;
-            }
-
-            article h2 {
-                font-size: 40px;
-                text-align: center;
-                text-transform: uppercase;
-            }
-
-            article .text-container {
-                display: flex;
-            }
-
-                article .text-container .text-box {
-                    margin: 20px;
-                    padding: 20px;
-                    background: #00c2cb;
-                }
-
-                    article .text-container .text-box h3 {
-                        font-size: 70px;
-                        text-align: center;
-                        text-transform: uppercase;
-                        margin-bottom: 10px;
-                    }
-
-        @media (max-width: 900px) {
-            article h1 {
-                font-size: 2rem;
-                text-align: center;
-            }
-
-            article .text-container {
-                flex-direction: column;
-              
-            }
-        }
-
-        .reveal {
-            position: relative;
-            opacity: 0;
-        }
-
-            .reveal.active {
-                opacity: 1;
-            }
-
-        .active.fade-bottom {
-            animation: fade-bottom 1s ease-in;
-        }
-
-        .active.fade-left {
-            animation: fade-left 1s ease-in;
-        }
-
-        .active.fade-right {
-            animation: fade-right 1s ease-in;
-        }
-
-        @keyframes fade-bottom {
-            0% {
-                transform: translateY(50px);
-                opacity: 0;
-            }
-
-            100% {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-
-        @keyframes fade-left {
-            0% {
-                transform: translateX(-100px);
-                opacity: 0;
-            }
-
-            100% {
-                transform: translateX(0);
-                opacity: 1;
-            }
-        }
-
-        @keyframes fade-right {
-            0% {
-                transform: translateX(100px);
-                opacity: 0;
-            }
-
-            100% {
-                transform: translateX(0);
-                opacity: 1;
-            }
-        }
-
-
-
-
-
-
-
-
-
-
-
-
-        .typewriter h1 {
-            overflow: hidden; /* Ensures the content is not revealed until the animation */
-            border-right: .15em solid orange; /* The typwriter cursor */
-            white-space: nowrap; /* Keeps the content on a single line */
-            margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-            letter-spacing: .15em; /* Adjust as needed */
-            animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
-        }
-
-        /* The typing effect */
-        @keyframes typing {
-            from {
-                width: 0
-            }
-
-            to {
-                width: 100%
-            }
-        }
-
-        /* The typewriter cursor effect */
-        @keyframes blink-caret {
-            from, to {
-                border-color: transparent
-            }
-
-            50% {
-                border-color: orange;
-            }
-        }
-
-        .zoom {
-            /*   width: 100%;
-                height: 3600px;*/
-            /*      background-color: #130994;
-                display: inline-block;
-                margin-bottom: -4px; text-align:
-                center; opacity: 0.8;
-                height: 100vh;
-                width: 100%;
-                display: grid;
-                place-items: center;
-                position: static;
-                top: 0;
-                left: 0;*/
-        }
-
-        .zoomtwo {
-            /*   width: 100%;
-                height: 3600px;*/
-            /*      background-color: #130994;
-                display: inline-block;
-                margin-bottom: -4px; text-align:
-                center; opacity: 0.8;
-                height: 100vh;
-                width: 100%;
-                display: grid;
-                place-items: center;
-                position: static;
-                top: 0;
-                left: 0;*/
-        }
-
-        .block {
-            background-color: #fff;
-            padding: 10px 20px;
-            font-size: 19px;
-            opacity: 1;
-            color: lightslategrey;
-            cursor: pointer;
-            text-align: center;
-            border-radius: 10px;
-            font-family: 'Linux Libertine G';
-            z-index: 0;
-            border: ridge 4px;
-        }
-
-            .block :hover {
-                color: #11395d;
-            }
-
-        input[type=text], select, textarea {
-            width: 100%;
-            padding: 20px 20px;
-            margin: 18px 10px;
-            display: inline-block;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-        }
-
-
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        section {
-            padding: 60px 0;
-            /* min-height: 100vh;*/
-        }
-
-        ul {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-        }
-
-        .contact-area {
-            border-bottom: 1px solid #353C46;
-        }
-
-        .contact-content p {
-            font-size: 15px;
-            margin: 30px 0 60px;
-            position: relative;
-        }
-
-            .contact-content p::after {
-                background: #353C46;
-                bottom: -30px;
-                content: "";
-                height: 1px;
-                left: 50%;
-                position: absolute;
-                transform: translate(-50%);
-                width: 80%;
-            }
-
-        .contact-content h6 {
-            color: #8b9199;
-            font-size: 15px;
-            font-weight: 400;
-            margin-bottom: 10px;
-        }
-
-        .contact-content span {
-            color: #353c47;
-            margin: 0 10px;
-        }
-
-        .contact-social {
-            margin-top: 30px;
-        }
-
-            .contact-social > ul {
-                display: inline-flex;
-            }
-
-            .contact-social ul li a {
-                border: 1px solid #8b9199;
-                color: #8b9199;
-                display: inline-block;
-                height: 40px;
-                margin: 0 10px;
-                padding-top: 7px;
-                transition: all 0.4s ease 0s;
-                width: 40px;
-            }
-
-                .contact-social ul li a:hover {
-                    border: 1px solid #FAB702;
-                    color: #FAB702;
-                }
-
-        .contact-content img {
-            max-width: 210px;
-        }
-
-        section, footer {
-            background: #1A1E25;
-            color: #868c96;
-        }
-
-            footer p {
-                padding: 40px 0;
-                text-align: center;
-            }
-
-            footer img {
-                width: 44px;
-            }
-
-
-        #Video {
-            opacity: 0,1;
-            position: fixed;
-            overflow: hidden;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: -100;
-        }
-
-
-
-        * {
-            margin: 0;
-            padding: 0;
-        }
-        /*   header, footer {
-                font-family: Raleway;
-                margin: 0 auto;
-                padding: 5em 3em;
-                text-align: center;
-                background: #555;
-            }*/
-        /*   header h1 {
-                    color: #AAA;
-                    font-size: 40px;
-                    font-weight: lighter;
-                    margin-bottom: 5px;
-                }*/
-        /*
-                header span {
-                    color: #222;
-                }
-
-                footer span {
-                    color: #AAA;
-                }*/
-
-        div.container {
-            font-family: Raleway;
-            margin: 0 auto;
-            padding: 10em 3em;
-            height: 200px;
-            text-align: center;
-        }
-        /*frontpart*/
-        @import 'https://fonts.google.com/specimen/Nerko+One';
-
-        div.container a {
-            color: #FFF;
-            text-decoration: none;
-            /*font Size and style*/
-            font-size: 60px;
-            font-family: Candara;
-            /* font: 30px Nerko One;*/
-            margin: 0px 10px;
-            padding: 10px 10px;
-            position: relative;
-            z-index: 0;
-            cursor: pointer;
-        }
-
-        .blue {
-            background: #11395d;
-        }
-        /* Circle behind */
-        div.circleBehind a:before, div.circleBehind a:after {
-            position: absolute;
-            top: 22px;
-            left: 50%;
-            width: 50px;
-            height: 50px;
-            border: 4px solid #0277bd;
-            transform: translateX(-50%) translateY(-50%) scale(0.8);
-            border-radius: 50%;
-            background: transparent;
-            content: "";
-            opacity: 0;
-            transition: all 0.3s;
-            z-index: -1;
-        }
-
-        div.circleBehind a:after {
-            border-width: 2px;
-            transition: all 0.4s;
-        }
-
-        div.circleBehind a:hover:before {
-            opacity: 1;
-            transform: translateX(-50%) translateY(-50%) scale(1);
-        }
-
-        div.circleBehind a:hover:after {
-            opacity: 1;
-            transform: translateX(-50%) translateY(-50%) scale(1.3);
-        }
-        /* Brackets go out */
-        div.brackets a:before, div.brackets a:after {
-            position: absolute;
-            opacity: 0;
-            font-size: 35px;
-            top: 0px;
-            transition: all 0.3s;
-        }
-
-        div.brackets a:before {
-            content: '(';
-            left: 0px;
-            transform: translateX(10px);
-        }
-
-        div.brackets a:after {
-            content: ')';
-            right: 0px;
-            transform: translateX(-10px);
-        }
-
-        div.brackets a:hover:before, div.brackets a:hover:after {
-            opacity: 1;
-            transform: translateX(0px);
-        }
-    </style>
 
 </body>
 </html>
-
-
